@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="home"><img src="images/logo.png">Noise Pageant </a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="home">Home</a></li>
+					<li><a href="noise-pageant-tour">Tour</a></li>
+					<li><a href="biography">Biography</a></li>
+					<li><a href="newsletter">Newsletter</a></li>
+					<%if(!currentuser){%>
+					<li><span style="display:block;"></span><a class="links" href="/users/login" >Log In</a></span></li>
+					<%}else{%>
+					<li><span style="display:block;"></span><a class="links" href="/logout" >Log Out</a></span></li>
+					<%}%>
+					<%if(currentuser){%>
+					<p style="color: rgb(0, 0, 0);">Welcome <%=currentuser.username%></p>
+					<%}%>
+				</ul>
+			</nav>
+
+			<section id="post" class="wrapper bg-img" data-bg="banner4.png">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>biography</h2>
+						</header>
+						<div class="content">
+							<p>American rock band formed in Aberdeend , their music maintains a popular following and continues to influence modern rock and roll culture.</p>
+							<p>American rock band formed in Aberdeend , their music maintains a popular following and continues to influence modern rock and roll culture.</p>
+							<p>American rock band formed in Aberdeend , their music maintains a popular following and continues to influence modern rock and roll culture.</p>
+							<p>American rock band formed in Aberdeend , their music maintains a popular following and continues to influence modern rock and roll culture.</p>
+						</div>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button alt icon fa-chevron-left"><span class="label">Previous</span></a></li>
+								<li><a href="#" class="button alt icon fa-chevron-right"><span class="label">Next</span></a></li>
+							</ul>
+						</footer>
+					</article>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h2>Contact Me</h2>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="https://www.youtube.com/channel/UCDV7Lc2_hyUz3twN-OL5-QQ/" class="icon round fa-youtube" target="_blank"><span class="label">Youtube</span></a></li>
+						<li><a href="https://www.facebook.com/noisepageant/" class="icon round fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/noise_pageant/" class="icon round fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+					</ul>
+
+					<div class="copyright">
+						<p style="display:block; text-align:center;color:black;">&copy; 2020 Noise Pageant. All Rights Reserved.</p>
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            
+	</body>
+</html>
